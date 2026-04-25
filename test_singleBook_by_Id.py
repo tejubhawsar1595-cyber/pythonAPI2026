@@ -30,7 +30,7 @@ class TestGetSingleBook:
 
 
     @pytest.mark.parametrize("book_list",[1,2,3,4,5])
-    def test_multiple_book_ids(self,book_list):
+    def test_multiple_book_ids_line(self,book_list):
         response = requests.get(f"{base_url}/books/{book_list}")
         assert response.status_code in [200,404]
 
